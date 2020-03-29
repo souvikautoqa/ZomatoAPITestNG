@@ -49,9 +49,9 @@
                 <version>2.19.1</version>
                 <configuration>
                     <!-- Suite testng xml file to consider for test execution -->
-                    <suiteXmlFiles>
-                       <suiteXmlFile>TestRunner.xml</suiteXmlFile>
-                   </suiteXmlFiles>
+<!--                    <suiteXmlFiles>-->
+<!--                        <suiteXmlFile>TestRunner.xml</suiteXmlFile>-->
+<!--                    </suiteXmlFiles>-->
                 </configuration>
             </plugin>
         </plugins>

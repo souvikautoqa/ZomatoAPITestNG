@@ -6,6 +6,10 @@ import core.Environments;
 import core.RestSession;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 
@@ -24,6 +28,16 @@ public class BaseLibrary {
         Assert.assertEquals(resp.getStatusCode(),200);
         return resp.getBody();
     }
+    
+    
+    public ResponseBody getCities(String cityName, int cityCount) throws Exception {
+        session = new RestSession();
+        Map params = new HashMap() {{put("q", cityName);put("count", cityCount);}};
+        Response resp = session.sendRequest(APIMethods.GET_ZOMATO_CITIES, Config.zomatoUserKey,params);
+        Assert.assertEquals(resp.getStatusCode(),200);
+        return resp.getBody();
+    }
+    
 
 
 }

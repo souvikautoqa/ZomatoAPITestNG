@@ -8,6 +8,7 @@ public class ZomatoTests extends BaseLibrary {
     @Test
     public void TC001() throws Exception {
         getRestaurantCategories();
+        getCities("Dublin",5);
 
     }
 
